@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Operators"
+             x:Class="Operators.OperatorsPage">
+    <ContentPage.BindingContext>
+        <local:CalViewModel></local:CalViewModel>
+    </ContentPage.BindingContext>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Entry Placeholder="First Number" Text="{Binding Num1}"></Entry>
+        <Entry Placeholder="Second Number" Text="{Binding Num2}"></Entry>
+        <Label Text="{Binding Result}"></Label>
+        <Button Text="Add" Command="{Binding AddCommand}"></Button>
+        <Button Text="Sub" Command="{Binding SubCommand}"></Button>
+        <Button Text="Mul" Command="{Binding MulCommand}"></Button>
+        <Button Text="Div" Command="{Binding DivCommand}"></Button>
+    </StackLayout>
+</ContentPage>
